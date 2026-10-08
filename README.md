@@ -1,7 +1,23 @@
-# Sample Hardhat 3 Project (minimal)
+# DCM Access Control
 
-This project has a minimal setup of Hardhat 3, without any plugins.
+A decentralized role-based access control smart contract built and tested using Solidity and Hardhat.
 
-## What's included?
+## Features
 
-The project includes native support for TypeScript, Hardhat scripts, tasks, and support for Solidity compilation and tests.
+- **Deployer Admin Rights**: Contract deployer is automatically assigned administrative privileges.
+- **Admin-Gated Operations**: Sensitive actions such as secret data updates (`setSecret`) are restricted using the `onlyAdmin` modifier.
+- **User Management**: Admin can whitelist user addresses via `addUser` mapping logic.
+- **Automated Verification**: End-to-end testing script validating both authorized admin execution and unauthorized caller rejection.
+
+## Tech Stack
+
+- **Smart Contract**: Solidity (`^0.8.28`)
+- **Framework**: Hardhat v3
+- **Blockchain Interaction**: Ethers.js
+- **Network**: Hardhat Local Node
+
+## Getting Started
+
+### 1. Install Dependencies
+```bash
+npm install
